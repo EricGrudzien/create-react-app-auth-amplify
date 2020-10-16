@@ -1,0 +1,144 @@
+amplify env import --name devh --config "{\
+  \"awscloudformation\": {\
+    \"AuthRoleName\": \"amplify-authcra-devh-230416-authRole\",\
+    \"UnauthRoleArn\": \"arn:aws:iam::608856417599:role/amplify-authcra-devh-230416-unauthRole\",\
+    \"AuthRoleArn\": \"arn:aws:iam::608856417599:role/amplify-authcra-devh-230416-authRole\",\
+    \"Region\": \"us-west-2\",\
+    \"DeploymentBucketName\": \"amplify-authcra-devh-230416-deployment\",\
+    \"UnauthRoleName\": \"amplify-authcra-devh-230416-unauthRole\",\
+    \"StackName\": \"amplify-authcra-devh-230416\",\
+    \"StackId\": \"arn:aws:cloudformation:us-west-2:608856417599:stack/amplify-authcra-devh-230416/95e9c170-0e71-11eb-8099-0a790c3de045\",\
+    \"AmplifyAppId\": \"d1egarj62500ix\"\
+  },\
+  \"categories\": {\
+    \"auth\": {\
+      \"cognitocf0c6096\": {}\
+    }\
+  }\
+}" --awsInfo "{\"configLevel\":\"project\",\"useProfile\":true,\"profileName\":\"default\"}" --yes
+
+
+
+-------------------
+
+egru@3c22fbba3be0 create-react-app-auth-amplify % amplify push
+✔ Successfully pulled backend environment devh from the cloud.
+
+Current Environment: devh
+
+| Category | Resource name   | Operation | Provider plugin   |
+| -------- | --------------- | --------- | ----------------- |
+| Api      | myapi           | Create    | awscloudformation |
+| Auth     | cognitocf0c6096 | No Change | awscloudformation |
+? Are you sure you want to continue? Yes
+
+The following types do not have '@auth' enabled. Consider using @auth with @model
+         - Todo
+Learn more about @auth here: https://docs.amplify.aws/cli/graphql-transformer/directives#auth
+
+
+
+? Enter maximum statement depth [increase from default if your schema is deeply nested] 2
+⠴ Updating resources in the cloud. This may take a few minutes...
+
+UPDATE_IN_PROGRESS authcognitocf0c6096         AWS::CloudFormation::Stack Wed Oct 14 2020 22:02:21 GMT-0700 (Pacific Daylight Time)               
+CREATE_IN_PROGRESS apimyapi                    AWS::CloudFormation::Stack Wed Oct 14 2020 22:02:21 GMT-0700 (Pacific Daylight Time)               
+UPDATE_IN_PROGRESS amplify-authcra-devh-230416 AWS::CloudFormation::Stack Wed Oct 14 2020 22:02:16 GMT-0700 (Pacific Daylight Time) User Initiated
+⠋ Updating resources in the cloud. This may take a few minutes...
+
+UPDATE_COMPLETE    authcognitocf0c6096 AWS::CloudFormation::Stack Wed Oct 14 2020 22:02:22 GMT-0700 (Pacific Daylight Time)                            
+CREATE_IN_PROGRESS apimyapi            AWS::CloudFormation::Stack Wed Oct 14 2020 22:02:22 GMT-0700 (Pacific Daylight Time) Resource creation Initiated
+⠙ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_IN_PROGRESS amplify-authcra-devh-230416-apimyapi-1IWMKPDXURYNN AWS::CloudFormation::Stack Wed Oct 14 2020 22:02:21 GMT-0700 (Pacific Daylight Time) User Initiated
+⠇ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_IN_PROGRESS GraphQLAPI AWS::AppSync::GraphQLApi Wed Oct 14 2020 22:02:26 GMT-0700 (Pacific Daylight Time) 
+⠇ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_IN_PROGRESS GraphQLSchema AWS::AppSync::GraphQLSchema Wed Oct 14 2020 22:02:31 GMT-0700 (Pacific Daylight Time)                            
+CREATE_IN_PROGRESS GraphQLAPIKey AWS::AppSync::ApiKey        Wed Oct 14 2020 22:02:30 GMT-0700 (Pacific Daylight Time)                            
+CREATE_COMPLETE    GraphQLAPI    AWS::AppSync::GraphQLApi    Wed Oct 14 2020 22:02:28 GMT-0700 (Pacific Daylight Time)                            
+CREATE_IN_PROGRESS GraphQLAPI    AWS::AppSync::GraphQLApi    Wed Oct 14 2020 22:02:28 GMT-0700 (Pacific Daylight Time) Resource creation Initiated
+⠹ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_IN_PROGRESS GraphQLAPIKey AWS::AppSync::ApiKey Wed Oct 14 2020 22:02:32 GMT-0700 (Pacific Daylight Time) Resource creation Initiated
+⠇ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_IN_PROGRESS GraphQLSchema AWS::AppSync::GraphQLSchema Wed Oct 14 2020 22:02:32 GMT-0700 (Pacific Daylight Time) Resource creation Initiated
+CREATE_COMPLETE    GraphQLAPIKey AWS::AppSync::ApiKey        Wed Oct 14 2020 22:02:32 GMT-0700 (Pacific Daylight Time)                            
+⠴ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_IN_PROGRESS Todo          AWS::CloudFormation::Stack  Wed Oct 14 2020 22:03:36 GMT-0700 (Pacific Daylight Time) 
+CREATE_COMPLETE    GraphQLSchema AWS::AppSync::GraphQLSchema Wed Oct 14 2020 22:03:34 GMT-0700 (Pacific Daylight Time) 
+⠏ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_IN_PROGRESS Todo AWS::CloudFormation::Stack Wed Oct 14 2020 22:03:37 GMT-0700 (Pacific Daylight Time) Resource creation Initiated
+⠙ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_IN_PROGRESS amplify-authcra-devh-230416-apimyapi-1IWMKPDXURYNN-Todo-1D5NPYCVKJ9KQ AWS::CloudFormation::Stack Wed Oct 14 2020 22:03:37 GMT-0700 (Pacific Daylight Time) User Initiated
+⠇ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_IN_PROGRESS TodoIAMRole AWS::IAM::Role       Wed Oct 14 2020 22:03:44 GMT-0700 (Pacific Daylight Time) Resource creation Initiated
+CREATE_IN_PROGRESS TodoTable   AWS::DynamoDB::Table Wed Oct 14 2020 22:03:43 GMT-0700 (Pacific Daylight Time) Resource creation Initiated
+CREATE_IN_PROGRESS TodoTable   AWS::DynamoDB::Table Wed Oct 14 2020 22:03:43 GMT-0700 (Pacific Daylight Time)                            
+CREATE_IN_PROGRESS TodoIAMRole AWS::IAM::Role       Wed Oct 14 2020 22:03:43 GMT-0700 (Pacific Daylight Time)                            
+⠏ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_COMPLETE TodoIAMRole AWS::IAM::Role Wed Oct 14 2020 22:04:01 GMT-0700 (Pacific Daylight Time) 
+⠋ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_COMPLETE    TodoDataSource AWS::AppSync::DataSource Wed Oct 14 2020 22:04:06 GMT-0700 (Pacific Daylight Time)                            
+CREATE_IN_PROGRESS TodoDataSource AWS::AppSync::DataSource Wed Oct 14 2020 22:04:06 GMT-0700 (Pacific Daylight Time) Resource creation Initiated
+CREATE_IN_PROGRESS TodoDataSource AWS::AppSync::DataSource Wed Oct 14 2020 22:04:04 GMT-0700 (Pacific Daylight Time)                            
+⠙ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_COMPLETE    DeleteTodoResolver AWS::AppSync::Resolver Wed Oct 14 2020 22:04:10 GMT-0700 (Pacific Daylight Time)                            
+CREATE_COMPLETE    GetTodoResolver    AWS::AppSync::Resolver Wed Oct 14 2020 22:04:10 GMT-0700 (Pacific Daylight Time)                            
+CREATE_COMPLETE    CreateTodoResolver AWS::AppSync::Resolver Wed Oct 14 2020 22:04:10 GMT-0700 (Pacific Daylight Time)                            
+CREATE_IN_PROGRESS DeleteTodoResolver AWS::AppSync::Resolver Wed Oct 14 2020 22:04:10 GMT-0700 (Pacific Daylight Time) Resource creation Initiated
+CREATE_IN_PROGRESS GetTodoResolver    AWS::AppSync::Resolver Wed Oct 14 2020 22:04:10 GMT-0700 (Pacific Daylight Time) Resource creation Initiated
+CREATE_COMPLETE    UpdateTodoResolver AWS::AppSync::Resolver Wed Oct 14 2020 22:04:10 GMT-0700 (Pacific Daylight Time)                            
+CREATE_IN_PROGRESS CreateTodoResolver AWS::AppSync::Resolver Wed Oct 14 2020 22:04:10 GMT-0700 (Pacific Daylight Time) Resource creation Initiated
+CREATE_COMPLETE    ListTodoResolver   AWS::AppSync::Resolver Wed Oct 14 2020 22:04:10 GMT-0700 (Pacific Daylight Time)                            
+CREATE_IN_PROGRESS UpdateTodoResolver AWS::AppSync::Resolver Wed Oct 14 2020 22:04:10 GMT-0700 (Pacific Daylight Time) Resource creation Initiated
+CREATE_IN_PROGRESS ListTodoResolver   AWS::AppSync::Resolver Wed Oct 14 2020 22:04:10 GMT-0700 (Pacific Daylight Time) Resource creation Initiated
+CREATE_IN_PROGRESS DeleteTodoResolver AWS::AppSync::Resolver Wed Oct 14 2020 22:04:08 GMT-0700 (Pacific Daylight Time)                            
+CREATE_IN_PROGRESS GetTodoResolver    AWS::AppSync::Resolver Wed Oct 14 2020 22:04:08 GMT-0700 (Pacific Daylight Time)                            
+CREATE_IN_PROGRESS CreateTodoResolver AWS::AppSync::Resolver Wed Oct 14 2020 22:04:08 GMT-0700 (Pacific Daylight Time)                            
+CREATE_IN_PROGRESS ListTodoResolver   AWS::AppSync::Resolver Wed Oct 14 2020 22:04:08 GMT-0700 (Pacific Daylight Time)                            
+CREATE_IN_PROGRESS UpdateTodoResolver AWS::AppSync::Resolver Wed Oct 14 2020 22:04:08 GMT-0700 (Pacific Daylight Time)                            
+⠙ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_COMPLETE amplify-authcra-devh-230416-apimyapi-1IWMKPDXURYNN-Todo-1D5NPYCVKJ9KQ AWS::CloudFormation::Stack Wed Oct 14 2020 22:04:17 GMT-0700 (Pacific Daylight Time) 
+CREATE_COMPLETE TodoTable                                                             AWS::DynamoDB::Table       Wed Oct 14 2020 22:04:14 GMT-0700 (Pacific Daylight Time) 
+⠙ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_IN_PROGRESS CustomResourcesjson AWS::CloudFormation::Stack Wed Oct 14 2020 22:04:27 GMT-0700 (Pacific Daylight Time) Resource creation Initiated
+CREATE_IN_PROGRESS CustomResourcesjson AWS::CloudFormation::Stack Wed Oct 14 2020 22:04:26 GMT-0700 (Pacific Daylight Time)                            
+CREATE_COMPLETE    Todo                AWS::CloudFormation::Stack Wed Oct 14 2020 22:04:24 GMT-0700 (Pacific Daylight Time)                            
+⠸ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_IN_PROGRESS amplify-authcra-devh-230416-apimyapi-1IWMKPDXURYNN-CustomResourcesjson-OOMC8XQMLFGM AWS::CloudFormation::Stack Wed Oct 14 2020 22:04:27 GMT-0700 (Pacific Daylight Time) User Initiated
+⠹ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_COMPLETE amplify-authcra-devh-230416-apimyapi-1IWMKPDXURYNN-CustomResourcesjson-OOMC8XQMLFGM AWS::CloudFormation::Stack Wed Oct 14 2020 22:04:30 GMT-0700 (Pacific Daylight Time) 
+⠏ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_COMPLETE CustomResourcesjson AWS::CloudFormation::Stack Wed Oct 14 2020 22:04:37 GMT-0700 (Pacific Daylight Time) 
+⠙ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_COMPLETE amplify-authcra-devh-230416-apimyapi-1IWMKPDXURYNN AWS::CloudFormation::Stack Wed Oct 14 2020 22:04:40 GMT-0700 (Pacific Daylight Time) 
+⠹ Updating resources in the cloud. This may take a few minutes...
+
+CREATE_COMPLETE apimyapi AWS::CloudFormation::Stack Wed Oct 14 2020 22:05:00 GMT-0700 (Pacific Daylight Time) 
+⠙ Updating resources in the cloud. This may take a few minutes...
+
+UPDATE_COMPLETE                     amplify-authcra-devh-230416 AWS::CloudFormation::Stack Wed Oct 14 2020 22:05:07 GMT-0700 (Pacific Daylight Time) 
+UPDATE_COMPLETE                     authcognitocf0c6096         AWS::CloudFormation::Stack Wed Oct 14 2020 22:05:06 GMT-0700 (Pacific Daylight Time) 
+UPDATE_COMPLETE_CLEANUP_IN_PROGRESS amplify-authcra-devh-230416 AWS::CloudFormation::Stack Wed Oct 14 2020 22:05:04 GMT-0700 (Pacific Daylight Time) 
+✔ Generated GraphQL operations successfully and saved at src/graphql
+✔ All resources are updated in the cloud
+
+GraphQL endpoint: https://cqw6otcfqvan3lnsjuwj7y6vom.appsync-api.us-west-2.amazonaws.com/graphql
+GraphQL API KEY: da2-psjrj52pr5hjxjvity4htzeuvq
